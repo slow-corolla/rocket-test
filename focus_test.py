@@ -19,7 +19,7 @@ def capture_image(output_path: Path):
         "--height", str(CAPTURE_HEIGHT),
 
         "--autofocus-mode", "auto",
-        "--autofocus-range", "full",
+        "--autofocus-range", "normal",
         "--autofocus-speed", "normal",
         "--autofocus-window", "0.25,0.25,0.5,0.5",
 

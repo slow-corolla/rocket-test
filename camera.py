@@ -78,7 +78,7 @@ def capture_with_rpicam_still(out_path: Path):
         "--height", str(CAPTURE_HEIGHT), 
 
         "--autofocus-mode", "auto", # Enable autofocus 
-        "--autofocus-range", "full", # Typical plant distance 
+        "--autofocus-range", "normal", # Typical plant distance 
         "--autofocus-speed", "normal", 
         "--autofocus-window", "0.25,0.25,0.5,0.5", # Focus on center region 
 
@@ -97,9 +97,9 @@ def capture_with_rpicam_still(out_path: Path):
     subprocess.run(cmd, check=True)
 
 def within_operating_hours():
-    # Return True if the current hour is between 12 PM and 11 PM inclusive.
+    # Return True if the current hour is between 5 AM and 4 PM inclusive.
     now = datetime.now().time()
-    return 12 <= now.hour <= 23 # Previous script used and instead of or; "or" allows this to wrap around midnight
+    return 5 <= now.hour <= 16 # Previous script used and instead of or; "or" allows this to wrap around midnight
     
 #def on_the_hour(): 
     # Return True if the current minute == 0.
