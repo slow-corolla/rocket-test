@@ -42,7 +42,7 @@ def send_failure_alert(error_info: str) -> None:
 CAPTURE_WIDTH = 4056            # X-axis image resolution
 CAPTURE_HEIGHT = 3040           # Y-axis image resolution
 
-PROTOCOL_NAME = "dataset_05"  # Change per grow protocol; also creates the matching subfolder in Drive on next sync
+PROTOCOL_NAME = "dataset_06"  # Change per grow protocol; also creates the matching subfolder in Drive on next sync
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 # OUT_DIR = SCRIPT_DIR / "output_photos"                    # Use the "output_photos" folder
